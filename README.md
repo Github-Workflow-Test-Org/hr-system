@@ -1,6 +1,6 @@
 # HR System - Oracle PL/SQL Sample Application
 
-A realistic employee HR management system demonstrating Oracle PL/SQL best practices and security vulnerabilities. This sample project is designed to test the SQL Simple Scanner's ability to detect security issues in Oracle PL/SQL code.
+A realistic employee HR management system demonstrating Oracle PL/SQL best practices jand security vulnerabilities. This sample project is designed to test the SQL Simple Scanner's ability to detect security issues in Oracle PL/SQL code.
 
 ## Overview
 
