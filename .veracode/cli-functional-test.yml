@@ -1,0 +1,35 @@
+name: HR-System
+testcases:
+- name: Verify that PL/SQL is packaged in the Package HR System
+  steps:
+  - type: exec
+    script: |
+      cd ../
+      veracode package --source . --type directory --output .veracode/output/auto --trust
+    assertions:
+      - result.code ShouldEqual 0
+      - result.timeseconds ShouldBeLessThan 300
+      - result.systemout ShouldContainSubstring "Build successful"
+      - result.systemout ShouldContainSubstring "Successfully created 2 artifact(s)"
+      - result.systemout ShouldContainSubstring ".veracode/output/auto/hr-system-1.0.0.jar"
+      - result.systemout ShouldContainSubstring ".veracode/output/auto/veracode-auto-pack-hr-system-sql.zip"
+
+  - type: check-zip-count
+    zip-file: "veracode-auto-pack-hr-system-sql.zip"
+    assertions:
+      - result.zip-file.count ShouldEqual 8
+
+  - type: check-zip-contents
+    zip-file: "veracode-auto-pack-hr-system-sql.zip"
+    assertions:
+      - result.zip-file.difference ShouldBeEmpty
+  
+  - type: check-zip-count
+    zip-file: "hr-system-1.0.0.jar"
+    assertions:
+      - result.zip-file.count ShouldEqual 193
+
+  - type: check-zip-contents
+    zip-file: "hr-system-1.0.0.jar"
+    assertions:
+      - result.zip-file.difference ShouldBeEmpty

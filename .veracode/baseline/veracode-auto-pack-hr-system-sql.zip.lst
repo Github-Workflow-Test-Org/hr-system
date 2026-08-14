@@ -1,0 +1,9 @@
+hr-system/database/functions/calculate_bonus.sql
+hr-system/database/functions/validate_employee_access.sql
+hr-system/database/procedures/generate_employee_report.sql
+hr-system/database/procedures/process_salary_increase.sql
+hr-system/database/procedures/send_notification.sql
+hr-system/database/schema/01_tables.sql
+hr-system/database/schema/02_sequences.sql
+hr-system/database/schema/03_triggers.sql
+Total files:        8
