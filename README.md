@@ -5,7 +5,7 @@ A realistic employee HR management system demonstrating Oracle PL/SQL best pract
 ## Overview
 
 The HR system implements core human resources management features with business logic primarily in the database layer:
-
+f
 - **Employee Management**: Hiring, salary management, termination
 - **Department Management**: Department structure and hierarchy
 - **Salary History**: Track salary changes and adjustments
